@@ -2,6 +2,8 @@
 
 @section('title', 'Pé de Moleque - Home')
 
+@section('class', 'home')
+
 @section('content')
  
 <div id="conteudo"> <!--INICIO CONTEUDO-->

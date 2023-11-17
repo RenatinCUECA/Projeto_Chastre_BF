@@ -2,7 +2,10 @@
 
 @section('title', 'Pé de Moleque - Produto')
 
+@section('class', 'cadastro')
+
 @section('content')
+
 
 <form action="enviar.php" method="post">
     <div class="reserva">
@@ -39,7 +42,7 @@
         <div class="aniversariante">
             <div>
                 <label for="nome">Nome do aniversariante:</label>
-                <input type="text" name="nome" id="nome" placeholder="Exemplo: Pedro Castro">
+                <input type="text" name="nome" id="nome" placeholder="Exemplo: Bruno Duarte">
             </div>
             <div>
                 <label for="idade">Idade a ser comemorada:</label>
