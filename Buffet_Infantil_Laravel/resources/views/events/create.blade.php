@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Pé de Moleque - Reserva')
+@section('title', 'Pé de Moleque - Produto')
 
 @section('content')
 

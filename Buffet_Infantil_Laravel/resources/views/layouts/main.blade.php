@@ -14,30 +14,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- CSS da aplicação -->
-    <link rel="styleshee// Ponta inicial do fluxo - onde o usuario acessat" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
 
 </head>
 <body class="home">
     <div id="container">
-        <div id="topo"> <!--INICIO TOPO-->
-            <a href="login.html" class="cta">Área logada</a>
+        <header id="topo"> <!--INICIO TOPO-->
+            <a href="login" class="cta">Área logada</a>
             <h1 class="logo">Pé de Moleque</h1>
-            <div>
+            <div></div>
             <ul id="navegacao">
                 <li class="primeiro">
-                    <a id="home" href="home.html">Home</a>
+                    <a id="home" href="welcome">Home</a>
                 </li>
                 <li>
-                    <a id="buffet" href="buffet.html">Buffet</a>
+                    <a id="buffet" href="buffet">Buffet</a>
                 </li>
                 <li>
-                    <a id="cadastro" href="reserva.html">Reserva</a>
+                    <a id="cadastro" href="/events/create">Reserva</a>
                 </li>
                 <li>
-                    <a id="contato" href="contato.html">Contato</a>
+                    <a id="contato" href="contato">Contato</a>
                 </li>
             </ul>
-        </div>
+        </header>
         </div> <!--FIM TOPO-->
 
         @yield('content')
