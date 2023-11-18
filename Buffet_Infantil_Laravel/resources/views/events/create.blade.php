@@ -7,7 +7,8 @@
 @section('content')
 
 
-<form action="enviar.php" method="post">
+<form action="/events" method="POST">
+    @csrf
     <div class="reserva">
     <div class="titulo">
     <h1>Solicitação de Reserva</h1>
