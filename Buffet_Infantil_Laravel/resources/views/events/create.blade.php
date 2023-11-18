@@ -9,8 +9,9 @@
 
 <form action="enviar.php" method="post">
     <div class="reserva">
+    <div class="titulo">
     <h1>Solicitação de Reserva</h1>
-
+    </div>
     <fieldset>
         <legend>Data e Hora</legend>
             <div class="data-hora">
@@ -27,10 +28,22 @@
         <div class="pacote">
             <label for="pacote">Pacote de comidas:</label>
             <select name="pacote" id="pacote">
-                <option value="padrao">Padrão</option>
+                <option value="classico">Clássico</option>
                 <option value="premium">Premium</option>
                 <option value="luxo">Luxo</option>
-            </select>
+                <option value="null">Buffet personalizado</option>
+                </select>
+                <div>
+                <label for="editor">Faça seu próprio Buffet personalizado! </label>
+                <textarea id="editor"></textarea>
+                <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
+                <script>
+                tinymce.init({
+                    selector: "#editor"
+                });
+                </script>
+                </div>
+            </div>
         </div>
     </fieldset>
     <fieldset>
