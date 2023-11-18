@@ -40,8 +40,9 @@
             </ul>
         </header>
         </div> <!--FIM TOPO-->
-
+        <div id="content">
         @yield('content')
+        </div>
     </div>
 
 

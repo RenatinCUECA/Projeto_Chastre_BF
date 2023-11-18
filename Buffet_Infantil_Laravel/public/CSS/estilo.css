@@ -6,6 +6,8 @@
 body {
     background: #f5ede6;
     font-family: 'Roboto';
+    min-height: 100vh;
+    position: relative;
 }
 
 #container {
@@ -25,6 +27,10 @@ body {
     font-family: Georgia, serif;
     text-indent: -9000px;
 
+}
+
+#content {
+    margin-top: 5em;
 }
 
 /* BARRA DE NAVEGCAO */
@@ -129,12 +135,15 @@ body.contato #navegacao a#contato {
 }
 
 #container-rodape {
+    margin-top: 1em;
     background: #eb8634;
     padding: 20px;
 }
 
 #rodape {
     color: rgb(39, 0, 114);
+    text-align: center;
+    padding: 0;
 }
 
 .centralizar {
@@ -276,3 +285,101 @@ input[type="submit"] {
     font-weight: bold;
     font-size: large;
 }
+
+/*================== ALTERANDO SEARCH CONTAINER ====================*/
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+.btn-primary {
+    background-color: #eb8634;
+    border: 1px solid #eb8634;
+}
+
+.btn-primary:hover {
+    background-color: #ff7300;
+    border-color: #ff7300;
+}
+
+/*
+#search-container {
+    background-image: url(../Imagens/baloes.avif);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-conteiner h1 {
+    color: #ff7300;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-conteiner form {
+    width: 50%;
+    margin: 0 auto;
+}
+*/
+/* ========== LISTA DE EVENTOS =============*/
+
+#events-container {
+    padding: 50px;
+}
+
+#events-container h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ff7300;
+}
+
+#events-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ff7300 ;
+}
+
+#cards-container {
+    display: flex;
+}
+
+#cards-container .card {
+    flex: 1 1 0;
+    max-width: 24%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+#events-container img {
+    max-height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.card .card-date {
+    font-size: 12px;
+    color: #f5ede6;
+}
+
+.card .card-date {
+    font-size: 12px;
+    color: #717171;
+}
+
+.card .card-nome {
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-participants {
+    font-size: 14px;
+    color: #757575;
+}
+
