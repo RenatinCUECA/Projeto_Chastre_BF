@@ -22,15 +22,16 @@ class EventController extends Controller
 
         $event = new Event;
 
-        $event -> nome = $request -> nome;
-        $event -> idade = $request -> idade;
-        $event -> qtd_convidados = $request -> qtd_convidados;
-        $event -> buffet = $request -> buffet;
-        $event -> mensagem = $request -> mensagem;
-        $event -> data = $request -> data;
-        $event -> hora = $request -> hora;
 
-        $event -> save();
+        $event->data = $request->data;
+        $event->hora = $request->hora;
+        $event->buffet = $request->buffet;
+        $event->editor = $request->editor;
+        $event->qtd_convidados = $request->qtd_convidados;
+        $event->nome = $request->nome;
+        $event->idade = $request->idade;
+
+        $event->save();
 
         return redirect('/');
     }

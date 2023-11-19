@@ -7,7 +7,7 @@
 @section('content')
 
 
-<form action="/events" method="POST">
+<form action="../events" method="post">
     @csrf
     <div class="reserva">
     <div class="titulo">
@@ -27,8 +27,8 @@
     <fieldset>
         <legend>Opções de Buffet</legend>
         <div class="pacote">
-            <label for="pacote">Pacote de comidas:</label>
-            <select name="pacote" id="pacote">
+            <label for="buffet">Pacote de comidas:</label>
+            <select name="buffet" id="buffet">
                 <option value="classico">Clássico</option>
                 <option value="premium">Premium</option>
                 <option value="luxo">Luxo</option>
@@ -50,8 +50,8 @@
     <fieldset>
         <legend>Aniversariante & convidados</legend>
         <div class="convidados">
-            <label for="convidados">Quantidade de convidados:</label>
-            <input type="number" name="convidados" id="convidados" min="10" max="100" placeholder="0">
+            <label for="qtd_convidados">Quantidade de convidados:</label>
+            <input type="number" name="qtd_convidados" id="qtd_convidados" min="1" placeholder="0">
         </div>
         <div class="aniversariante">
             <div>
@@ -60,7 +60,7 @@
             </div>
             <div>
                 <label for="idade">Idade a ser comemorada:</label>
-                <input type="number" name="idade" id="idade" placeholder="Exemplo: 9">
+                <input type="number" name="idade" id="idade" min="1" placeholder="Exemplo: 9">
             </div>
 
             <input type="submit" value="Enviar">
