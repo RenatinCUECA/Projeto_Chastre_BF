@@ -23,8 +23,8 @@
     <fieldset>
         <legend>Data e Hora</legend>
             <div class="data-hora">
-                <label for="data">Data:</label>
-                <input type="date" name="data" id="data">
+                <label for="date">Data:</label>
+                <input type="date" name="date" id="date">
             </div>
             <div class="data-hora">
                 <label for="hora">Hora:</label>

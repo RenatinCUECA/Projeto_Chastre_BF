@@ -14,7 +14,7 @@
         </div>
         <div id="info-container" class="col-md6">
             <h1>{{ $event->nome }}</h1>
-            <p class="event-date"><ion-icon name="calendar-outline"></ion-icon> {{ $event->data }} </p>
+            <p class="event-date"><ion-icon name="calendar-outline"></ion-icon> {{ $event->date }} </p>
             <p class="event-hora"><ion-icon name="time-outline"></ion-icon>{{ $event->hora }}</p>
             <p class="event-buffet"><ion-icon name="fast-food-outline"></ion-icon>{{ $event->buffet }}</p>
             <p class="event-qtd_convidados"><ion-icon name="people-outline"></ion-icon>{{ $event->qtd_convidados }}</p>
