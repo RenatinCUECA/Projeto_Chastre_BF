@@ -39,6 +39,17 @@
                 </li>
             </ul>
         </header>
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    @if (session('msg'))
+                        <p class="msg">
+                            {{session('msg')}}
+                        </p>
+                    @endif
+                </div>
+            </div>
+        </main>
         </div> <!--FIM TOPO-->
         <div id="content">
         @yield('content')

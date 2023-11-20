@@ -19,7 +19,7 @@ body {
 
 #topo {
     height: 200px;
-    background: rgb(39, 0, 114) url(../Imagens/logo.jpeg) no-repeat center top;
+    background: rgb(39, 0, 114) url(../img/logo.jpeg) no-repeat center top;
     padding-top: 30px;
 }
 
@@ -352,7 +352,7 @@ input[type="submit"] {
     max-width: 15%;
     border-radius: 10px;
     padding: 0;
-    margin: 5px;
+    margin: 1.1%;
 }
 
 #events-container img {
@@ -382,4 +382,16 @@ input[type="submit"] {
     font-size: 14px;
     color: #757575;
 }
+/*================ FLASH MESSAGES ==================*/
+.msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 3em;
+    text-align: center;
+    padding: 10px;
+}
+
 

@@ -7,12 +7,19 @@
 @section('content')
 
 
-<form action="{{ route('events.store')}}" method="post">
+<form action="{{ route('events.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="reserva">
     <div class="titulo">
     <h1>Solicitação de Reserva</h1>
     </div>
+    <fieldset>
+        <legend></legend>
+            <div class="form-group">
+                <label for="image">Imagem do Buffet:</label>
+                <input type="file" id="image" name="image" class="form-control-file">
+            </div>
+    </fieldset>
     <fieldset>
         <legend>Data e Hora</legend>
             <div class="data-hora">

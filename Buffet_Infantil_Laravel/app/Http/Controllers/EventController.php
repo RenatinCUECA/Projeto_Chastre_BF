@@ -14,8 +14,7 @@ class EventController extends Controller
         return view('events.index',['events'=>$events]);
     }
 
-    public function create()
-    {
+    public function create() {
         return view('events.create');
     }
 
@@ -33,8 +32,22 @@ class EventController extends Controller
         $event->nome = $request->nome;
         $event->idade = $request->idade;
 
+        //Image Upload
+        if($request-> hasFile('image') && $request->file('image')->isValid()) 
+        {
+            $requestImage = $request -> image;
+
+            $extension = $requestImage -> extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now"));
+
+            $requestImage -> move(public_path('img/events'), $imageName);
+
+            $event->image = $imageName;
+        }
+
         $event->save();
 
-        return redirect()->route('events.index');
+        return redirect()->route('events.index')->with('msg', 'Reserva realizada com sucesso');
     }
 }
