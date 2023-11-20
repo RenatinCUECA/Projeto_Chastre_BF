@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('data');
             $table->time('hora');
             $table->string('buffet');
-            $table->text('editor');
+            $table->text('editor')->nullable();
             $table->integer('qtd_convidados');
             $table->string('nome');
             $table->integer('idade');

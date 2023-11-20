@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
-@section('title', 'Pé de Moleque - Produto')
+@section('title', 'Pé de Moleque - Reserva')
 
 @section('class', 'cadastro')
 
 @section('content')
 
 
-<form action="../events" method="post">
+<form action="{{ route('events.store')}}" method="post">
     @csrf
     <div class="reserva">
     <div class="titulo">

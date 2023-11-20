@@ -16,15 +16,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/events/create', [EventController::class, 'create']);
+Route::get('create', [EventController::class, 'create']);
 Route::post('/events',[EventController::class, 'store']);
+
+Route::resource('events', EventController::class);
 
 Route::get('/buffet', function () { // Ponta inicial do fluxo - onde o usuario acessa
     return view('buffet'); //Ponto final - fim da manipulação de dados
 });
 
-Route::get('/reserva', function () {
-    return view('reserva'); 
+Route::get('/events/reserva', function () {
+    return view('events/reserva'); 
 });
 
 Route::get('/contato', function () {
@@ -32,5 +34,6 @@ Route::get('/contato', function () {
 });
 
 Route::get('/login', function () {
-    return view('login'); 
+    return view('/login'); 
 });
+

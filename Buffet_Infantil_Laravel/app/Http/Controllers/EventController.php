@@ -11,16 +11,18 @@ class EventController extends Controller
     public function index () {
         $events = Event::all();
 
-        return view('welcome',['events'=>$events]);
+        return view('events.index',['events'=>$events]);
     }
 
-    public function create () {
+    public function create()
+    {
         return view('events.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+     {
 
-        $event = new Event;
+        $event = new Event();
 
 
         $event->data = $request->data;
@@ -33,6 +35,6 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect('/');
+        return redirect()->route('events.index');
     }
 }
