@@ -30,7 +30,7 @@ body {
 }
 
 #content {
-    margin-top: 5em;
+    margin-top: 60px;
 }
 
 /* BARRA DE NAVEGCAO */
@@ -327,6 +327,30 @@ input[type="submit"] {
 */
 /* ========== LISTA DE EVENTOS =============*/
 
+#search-container {
+    background-image: url("../img/background3.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    color: rgb(39,0 ,114);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255,0.5);
+    border-radius: 30px;
+    width: 25%;
+    margin: 30px auto;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
 #events-container {
     padding: 50px;
 }
@@ -341,6 +365,7 @@ input[type="submit"] {
     color: #757575;
     margin-bottom: 30px;
     border-bottom: 1px solid #ff7300 ;
+    font-size: 30px;
 }
 
 #cards-container {

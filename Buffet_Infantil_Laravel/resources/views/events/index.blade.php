@@ -8,15 +8,19 @@
 
    <div id="search-container" class="col-md-12">
         <h1>Busque um evento</h1>
-        <form action="">
-            <input type="text" id="search" class="form-control" placeholder="Procurar...">
+        <form action="/" method="GET">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
         </form>
     </div>
     <div id="events-container" class="col-md-12">
-        <h2>Suas reservas</h2>
+    @if($search)
+        <h2>Buscando por: {{$search}}</h2>
+    @else
+        <h2>Suas reservas:</h2>
         <p class="subtitle">
             Veja as suas reservas e organize seu evento!
         </p>
+    @endif
         <div id="cards-container" class="row">
             @foreach ($events as $event)
                 <div class="card col-md-3">
@@ -29,8 +33,10 @@
                     </div>
                 </div>
             @endforeach
-            @if (count($events) == 0)
-            <p>Você não reservou nenhum buffet ainda <ion-icon name="sad-outline"></ion-icon></p>
+            @if (count($events) == 0 && $search)
+            <p>Nenhuma reserva encontrada: {{$search}}! <a href="/">Voltar <ion-icon name="arrow-undo-outline"></ion-icon></a></p>
+            @elseif(count($events) == 0 )
+            <p>Você não reservou nenhum buffet ainda <ion-icon name="sad-outline"></ion-icon></p> 
             @endif
         </div>
     </div>
