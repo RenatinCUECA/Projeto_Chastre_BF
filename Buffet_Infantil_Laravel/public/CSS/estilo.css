@@ -394,4 +394,44 @@ input[type="submit"] {
     padding: 10px;
 }
 
+/*============== PAGINA DO EVENTO ==========*/
+
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p {
+    text-align: right;
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    color: #717171;
+}
+
+#info-contaienr h3,
+#description-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #ff7300;
+    margin-right: 5px;
+}
+
+#info-container #event-submit {
+    margin: 20px 0;
+}
+
 

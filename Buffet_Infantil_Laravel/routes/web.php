@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('create', [EventController::class, 'create']);
+Route::get('/events/create',[EventController::class, 'create']);
+Route::get('/events/{id}',[EventController::class, 'show']);
 Route::post('/events',[EventController::class, 'store']);
-
 Route::resource('events', EventController::class);
+
+
 
 Route::get('/buffet', function () { // Ponta inicial do fluxo - onde o usuario acessa
     return view('buffet'); //Ponto final - fim da manipulação de dados
