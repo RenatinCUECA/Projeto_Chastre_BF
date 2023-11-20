@@ -21,9 +21,21 @@
 <body class="@yield('class')">
     <div id="container">
         <header id="topo"> <!--INICIO TOPO-->
-            <a href="login" class="cta">Área logada</a>
+            @auth
+            <a href="/dashbord" class="cta">Minhas reservas</a>
+            <form action="/logout" method="POST">
+                @csrf
+                <a href="/logout" class="sair" onclick="event.preventDefault();
+                    this.closest('form').submit();">
+                        Sair
+                </a>
+            </form>
+            @endauth
+            @guest
+                <a href="register" class="cta">Cadastrar</a>
+                <a href="login" class="cta">Entrar</a><
+            @endguest
             <h1 class="logo">Pé de Moleque</h1>
-            <div></div>
             <ul id="navegacao">
                 <li class="primeiro">
                     <a id="home" href="/">Home</a>

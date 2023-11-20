@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
-Route::get('/events/create',[EventController::class, 'create']);
+Route::get('/events/create',[EventController::class, 'create'])->middleware('auth');
 Route::get('/events/{id}',[EventController::class, 'show']);
 Route::post('/events',[EventController::class, 'store']);
-Route::resource('events', EventController::class);
+Route::post('/events', 'EventsController@store')->name('events.store');
 
 
 
@@ -27,18 +27,9 @@ Route::get('/buffet', function () { // Ponta inicial do fluxo - onde o usuario a
     return view('buffet'); //Ponto final - fim da manipulação de dados
 });
 
-Route::get('/events/reserva', function () {
-    return view('events/reserva'); 
-});
-
 Route::get('/contato', function () {
     return view('contato'); 
 });
-
-Route::get('/login', function () {
-    return view('/login'); 
-});
-
 
 Route::middleware([
     'auth:sanctum',

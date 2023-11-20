@@ -19,6 +19,7 @@
             <p class="event-buffet"><ion-icon name="fast-food-outline"></ion-icon>{{ $event->buffet }}</p>
             <p class="event-qtd_convidados"><ion-icon name="people-outline"></ion-icon>{{ $event->qtd_convidados }}</p>
             <p class="event-idade"><ion-icon name="balloon-outline"></ion-icon>{{ $event->idade }}</p>
+            <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{ $eventOwner['name'] }}</p>
             <a href="#" class="btn btn-primary" id="event-submit">Confirmar presença</a>
         </div>
         <div class="col-md-12" id="editor-container">
