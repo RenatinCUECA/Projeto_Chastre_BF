@@ -6,9 +6,8 @@
 
 @section('content')
 
-
 <form action="{{ route('events.store')}}" method="post" enctype="multipart/form-data">
-    @csrf
+    @csrf()
     <div class="reserva">
     <div class="titulo">
     <h1>Solicitação de Reserva</h1>
@@ -23,8 +22,8 @@
     <fieldset>
         <legend>Data e Hora</legend>
             <div class="data-hora">
-                <label for="date">Data:</label>
-                <input type="date" name="date" id="date">
+                <label for="data">Data:</label>
+                <input type="date" name="data" id="data">
             </div>
             <div class="data-hora">
                 <label for="hora">Hora:</label>

@@ -24,7 +24,7 @@ class EventController extends Controller
         $event = new Event();
 
 
-        $event->date = $request->date;
+        $event->data = $request->data;
         $event->hora = $request->hora;
         $event->buffet = $request->buffet;
         $event->editor = $request->editor;
@@ -33,18 +33,18 @@ class EventController extends Controller
         $event->idade = $request->idade;
 
         //Image Upload
-        if($request-> hasFile('image') && $request->file('image')->isValid()) 
-        {
-            $requestImage = $request -> image;
+        // if($request-> hasFile('image') && $request->file('image')->isValid()) 
+        // {
+        //     $requestImage = $request -> image;
 
-            $extension = $requestImage -> extension();
+        //     $extension = $requestImage -> extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now"));
+        //     $imageName = md5($requestImage->getClientOriginalName() . strtotime("now"));
 
-            $requestImage -> move(public_path('img/events'), $imageName);
+        //     $requestImage -> move(public_path('img/events'), $imageName);
 
-            $event->image = $imageName;
-        }
+        //     $event->image = $imageName;
+        // }
 
         $event->save();
 

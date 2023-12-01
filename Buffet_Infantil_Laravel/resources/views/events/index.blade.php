@@ -22,7 +22,7 @@
                 <div class="card col-md-3">
                     <img src="../img/events/{{ $event -> image}}" alt="{{ $event -> nome}}">
                     <div class="card-body">
-                        <h5 class="card-date"><ion-icon name="calendar-outline"></ion-icon>{{date('d/m/Y', strtotime($event -> date)) }}</h5>
+                        <h5 class="card-date"><ion-icon name="calendar-outline"></ion-icon>{{date('d/m/Y', strtotime($event -> data)) }}</h5>
                         <div class="card-nome">{{$event -> nome}}</div>
                         <p class="card-idade"><ion-icon name="balloon-outline"></ion-icon>{{ $event -> idade}}</p>
                         <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
