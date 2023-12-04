@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BuffetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +24,7 @@ Route::resource('events', EventController::class);
 
 
 
-Route::get('/buffet', function () { // Ponta inicial do fluxo - onde o usuario acessa
-    return view('buffet'); //Ponto final - fim da manipulação de dados
-});
+Route::get('/buffet', [BuffetController::class, 'index'])->name('buffet.index');
 
 Route::get('/events/reserva', function () {
     return view('events/reserva'); 
@@ -33,7 +32,7 @@ Route::get('/events/reserva', function () {
 
 Route::get('/contato', function () {
     return view('contato'); 
-});
+})->name('contato');
 
 Route::get('/login', function () {
     return view('/login'); 

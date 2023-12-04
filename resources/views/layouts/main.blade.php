@@ -29,13 +29,13 @@
                     <a id="home" href="/">Home</a>
                 </li>
                 <li>
-                    <a id="buffet" href="buffet">Buffet</a>
+                    <a id="buffet" href="{{route('buffet.index')}}">Buffet</a>
                 </li>
                 <li>
-                    <a id="cadastro" href="/events/create">Reserva</a>
+                    <a id="cadastro" href="{{route('events.create')}}">Reserva</a>
                 </li>
                 <li>
-                    <a id="contato" href="contato">Contato</a>
+                    <a id="contato" href="{{route('contato')}}">Contato</a>
                 </li>
             </ul>
         </header>
