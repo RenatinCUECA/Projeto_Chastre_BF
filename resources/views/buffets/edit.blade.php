@@ -5,7 +5,7 @@
 @section('class', 'buffet')
 
 @section('content')
-
+<link rel="stylesheet" type="text/css" href="{{asset('CSS/estilo.css')}}">
 <div class="container mt-2">
     <div class="row">
         <div class="col-lg-12 margin-tb">
