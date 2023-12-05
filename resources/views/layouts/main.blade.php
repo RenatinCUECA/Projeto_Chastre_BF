@@ -29,7 +29,7 @@
                     <a id="home" href="/">Home</a>
                 </li>
                 <li>
-                    <a id="buffet" href="{{route('buffet.index')}}">Buffet</a>
+                    <a id="buffet" href="{{route('buffets.index')}}">Buffet</a>
                 </li>
                 <li>
                     <a id="cadastro" href="{{route('events.create')}}">Reserva</a>
