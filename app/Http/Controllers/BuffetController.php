@@ -23,8 +23,11 @@ class BuffetController extends Controller
     {
         $buffet = new Buffet();
 
+        $description = str_replace('</p>', ' - ', $request->description);
+        $description = str_replace('<p>', '', $description);
+
         $buffet->name = $request->name;
-        $buffet->description = $request->description;
+        $buffet->description = $description;
         $buffet->price = $request->price;
 
         $buffet->save();

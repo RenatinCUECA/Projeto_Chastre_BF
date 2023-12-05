@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Produtos</h2>
+                <h2>Opções de Buffet</h2>
             </div>
             <div class="pull-right mb-2">
                 <a class="btn btn-success" href="{{ route('buffets.create') }}"> Criar novo Buffet</a>
@@ -22,9 +22,9 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Preço</th>
+                <th>Título</th>
+                <th>Cardápio</th>
+                <th>Preço por pessoa</th>
                 <th width="280px">Action</th>
             </tr>
         </thead>

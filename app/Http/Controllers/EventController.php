@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buffet;
 use Illuminate\Http\Request;
 
 use App\Models\Event;
@@ -15,7 +16,9 @@ class EventController extends Controller
     }
 
     public function create() {
-        return view('events.create');
+        $buffets = Buffet::all();
+
+        return view('events.create',['buffets'=>$buffets]);
     }
 
     public function store(Request $request)
@@ -58,4 +61,3 @@ class EventController extends Controller
         return view('events.show', ['event' => $event]);
     }
 }
-

@@ -34,13 +34,13 @@
         <legend>Opções de Buffet</legend>
         <div class="pacote">
             <label for="buffet">Pacote de comidas:</label>
-            <select name="buffet" id="buffet">
-                <option value="classico">Clássico</option>
-                <option value="premium">Premium</option>
-                <option value="luxo">Luxo</option>
-                <option value="null">Buffet personalizado</option>
+            <select name="buffet" id="buffet_select" onchange="handleSelectChange()">
+                @foreach ($buffets as $buffet)
+                <option value="{{$buffet->name}}">{{$buffet->name}}</option>
+                @endforeach
+                <option value="personalizado">Buffet personalizado</option>
                 </select>
-                <div>
+                <div id="opt_editor">
                 <label for="editor">Faça seu próprio Buffet personalizado! </label>
                 <textarea id="editor"></textarea>
                 <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
@@ -50,6 +50,21 @@
                 });
                 </script>
                 </div>
+                <script>
+                    function handleSelectChange() {
+                        const select = document.getElementById('buffet_select');
+                        const editor = document.getElementById('opt_editor');
+                        
+                        if (select.value === 'personalizado') {
+                            editor.style.display = "block";
+                        } else {
+                            editor.style.display = "none";
+                        }
+                    }
+
+                    handleSelectChange();
+                </script>
+                
             </div>
         </div>
     </fieldset>

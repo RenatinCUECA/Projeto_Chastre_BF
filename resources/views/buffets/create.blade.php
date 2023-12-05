@@ -21,20 +21,29 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nome:</strong>
+                    <label for="name"><strong>Nome:</strong></label>  
                     <input type="text" name="name" class="form-control">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Cardápio:</strong>
-                    <input type="text" name="description" class="form-control">
+
+                    <div>
+                        <label for="description"><strong>Cardápio:</strong></label>
+                        <textarea id="description" name="description"></textarea>
+                        <script type="text/javascript" src='https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'></script>
+                        <script>
+                        tinymce.init({
+                            selector: "#description"
+                        });
+                        </script>
+                        </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Preço:</strong>
-                    <input type="text" name="price" class="form-control">
+                    <label for="price"><strong>Preço por pessoa:</strong></label>
+                    <input type="number" step="any"  name="price" class="form-control">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary ml-3">Submit</button>
